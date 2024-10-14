@@ -1,0 +1,11 @@
+product_id,product_name,category,price
+1,T-Shirt,Apparel,20.00
+2,Hoodie,Apparel,35.00
+3,Jeans,Apparel,50.00
+4,Sneakers,Footwear,75.00
+5,Jacket,Outerwear,100.00
+6,Sunglasses,Accessories,25.00
+7,Backpack,Bags,40.00
+8,Hat,Accessories,15.00
+9,Boots,Footwear,85.00
+10,Watch,Accessories,150.00

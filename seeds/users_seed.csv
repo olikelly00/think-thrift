@@ -1,0 +1,11 @@
+user_id,username,country,join_date,email,user_rating,items_sold,items_bought
+1,JohnDoe,US,2022-03-01,johndoe@email.com,4.5,15,5
+2,JaneSmith,UK,2021-06-15,janesmith@email.com,4.7,22,8
+3,MichaelRoss,US,2023-01-10,michael@email.com,4.2,7,12
+4,EmilyClark,CA,2022-08-20,emily@email.com,4.9,35,10
+5,SarahLee,AU,2023-05-05,sarahlee@email.com,4.3,10,6
+6,PeterParker,UK,2021-11-11,peter@email.com,4.8,25,3
+7,BruceWayne,US,2022-07-07,bruce@email.com,4.6,12,4
+8,DianaPrince,CA,2023-02-14,diana@email.com,4.4,9,15
+9,ClarkKent,AU,2021-10-31,clark@email.com,4.5,14,7
+10,LoisLane,US,2022-12-25,lois@email.com,4.7,18,9

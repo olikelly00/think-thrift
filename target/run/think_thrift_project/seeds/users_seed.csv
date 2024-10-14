@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "think-thrift-db"."public"."users_seed" ("user_id" integer,"username" text,"country" text,"join_date" date,"email" text,"user_rating" float8,"items_sold" integer,"items_bought" integer)
+  ;
+    -- dbt seed --
+    
+          insert into "think-thrift-db"."public"."users_seed" ("user_id", "username", "country", "join_date", "email", "user_rating", "items_sold", "items_bought") values
+          (%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s)
+      
+
+;
+  

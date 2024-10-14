@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "think-thrift-db"."public"."products_seed";
+    -- dbt seed --
+    
+          insert into "think-thrift-db"."public"."products_seed" ("product_id", "product_name", "category", "price") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+      
+
+;
+  
