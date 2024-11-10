@@ -1,6 +1,7 @@
 import pytest
 from lib.database_connection import DatabaseConnection
 
+
 # This is a Pytest fixture.
 # It creates an object that we can use in our tests.
 # We will use it to create a database connection.
@@ -9,6 +10,7 @@ def db_connection():
     conn = DatabaseConnection()
     conn.connect()
     return conn
+
 
 # Now, when we create a test, if we allow it to accept a parameter called `db_connection`,
 # Pytest will automatically pass in the object we created above.

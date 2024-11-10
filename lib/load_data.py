@@ -5,9 +5,13 @@ from lib.ingest_from_csv import ingest_and_clean_csv
 
 
 # Load your DataFrame (users)
-user_csv_file_path = os.path.join(os.path.dirname(__file__), '../seeds/users.csv')
-products_csv_file_path = os.path.join(os.path.dirname(__file__), '../seeds/products.csv')
-sales_csv_file_path = os.path.join(os.path.dirname(__file__), '../seeds/transactions.csv')
+user_csv_file_path = os.path.join(os.path.dirname(__file__), "../seeds/users.csv")
+products_csv_file_path = os.path.join(
+    os.path.dirname(__file__), "../seeds/products.csv"
+)
+sales_csv_file_path = os.path.join(
+    os.path.dirname(__file__), "../seeds/transactions.csv"
+)
 
 
 users = ingest_and_clean_csv(user_csv_file_path)
@@ -25,7 +29,6 @@ db.execute("DROP TABLE IF EXISTS sales;")
 db.execute("DROP TABLE IF EXISTS transactions;")
 db.execute("DROP TABLE IF EXISTS products;")
 db.execute("DROP TABLE IF EXISTS users;")
-
 
 
 # Create the table schema if it doesn't exist (example schema for users)
@@ -75,7 +78,18 @@ for index, row in users.iterrows():
     INSERT INTO users (username, country, join_date, email, user_rating, items_sold, items_bought)
     VALUES (%s, %s, %s, %s, %s, %s, %s);
     """
-    db.execute(user_insert_query, [row['username'], row['country'], row['join_date'], row['email'], row['user_rating'], row['items_sold'], row['items_bought']])
+    db.execute(
+        user_insert_query,
+        [
+            row["username"],
+            row["country"],
+            row["join_date"],
+            row["email"],
+            row["user_rating"],
+            row["items_sold"],
+            row["items_bought"],
+        ],
+    )
 
 print("Users inserted successfully!")
 
@@ -84,7 +98,9 @@ for index, row in products.iterrows():
     INSERT INTO products (product_name, category, price)
     VALUES (%s, %s, %s);
     """
-    db.execute(product_insert_query, [row['product_name'], row['category'], row['price']])
+    db.execute(
+        product_insert_query, [row["product_name"], row["category"], row["price"]]
+    )
 
 print("Products inserted successfully!")
 
@@ -93,11 +109,13 @@ for index, row in sales.iterrows():
     INSERT INTO transactions (user_id, product_id, sale_date, quantity)
     VALUES (%s, %s, %s, %s);
     """
-    db.execute(sales_insert_query, [row['user_id'], row['product_id'], row['sale_date'], row['quantity']])
+    db.execute(
+        sales_insert_query,
+        [row["user_id"], row["product_id"], row["sale_date"], row["quantity"]],
+    )
 
 print("Sales inserted successfully!")
 
 print(db.execute("SELECT * FROM transactions"))
 print(db.execute("SELECT * FROM products"))
 print(db.execute("SELECT * FROM users"))
-
