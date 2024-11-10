@@ -1,3 +1,6 @@
 __pycache__
 .vscode
 .pytest_cache
+think-thrift-env
+logs
+logfile
