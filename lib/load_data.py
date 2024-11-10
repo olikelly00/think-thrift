@@ -1,5 +1,4 @@
 import os
-import pandas as pd
 from lib.database_connection import DatabaseConnection
 from lib.ingest_from_csv import ingest_and_clean_csv
 

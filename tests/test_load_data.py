@@ -1,4 +1,3 @@
-from lib.load_data import load_data
 from lib.database_connection import DatabaseConnection
 
 
